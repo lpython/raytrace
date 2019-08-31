@@ -91,7 +91,7 @@ function onLoad() {
 
   sceneSelector.addEventListener('change', () => {
     // scene = [emptyScene, defaultScene, scene2][parseInt(sceneSelector.value)]();
-    scene = defaultScene;
+    scene = defaultScene();
     renewRaytrace();
     outputRenderImage();
   });

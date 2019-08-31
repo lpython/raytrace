@@ -9,6 +9,10 @@
         "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
         "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
       },
+      "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f",
+        "signature": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f"
+      },
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": {
         "version": "4ab19088d508f9e62bfc61c157e8a65b2afaefa251ecca315e7d20b5b97b256f",
         "signature": "4ab19088d508f9e62bfc61c157e8a65b2afaefa251ecca315e7d20b5b97b256f"
@@ -45,161 +49,158 @@
         "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
         "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
       },
-      "./src/vector.ts": {
-        "version": "e4c30cfe83f16f39d688afb9de7db860977c28137a94988311a277d1001a6584",
+      "../shared/lib/vector.d.ts": {
+        "version": "76cd722134bf64280e52aa6be158132b558fe26c4c2aaac5413e1501decbd567",
         "signature": "76cd722134bf64280e52aa6be158132b558fe26c4c2aaac5413e1501decbd567"
       },
-      "./src/camera.ts": {
-        "version": "188f9a3f29e626540b2dcccc158d869a961fb66cdaeae41ad4a1109fe764fa0d",
-        "signature": "4811a582425d2d13a4ebf007bdc8eed9e5ed1cbbd0b53f42317eb2f526b0c1fa"
-      },
-      "./src/color.ts": {
-        "version": "a70274648f9142833db374fec63fff914f6a4f0e0f08d1ae92610ddd3ab6566d",
+      "../shared/lib/color.d.ts": {
+        "version": "255fc9ee61aa17d6f7bed4db2d9c81f2e8adc9cc942541fae989a7a3ecd573e6",
         "signature": "255fc9ee61aa17d6f7bed4db2d9c81f2e8adc9cc942541fae989a7a3ecd573e6"
       },
-      "./src/imagedata.ts": {
-        "version": "102beb31a197ca272d5b41091f05acc60bc5401500e143675e951b8f25b2184d",
-        "signature": "5247c8994fe3c1502b74958f8c6605dd5237b2366faa757e86ce9880b5e2ea39"
-      },
-      "./src/ray.ts": {
-        "version": "b2c18a8228d4cd3234fab146b414f82cb0e8fb5f63591e9b6902171680afe7ac",
+      "../shared/lib/ray.d.ts": {
+        "version": "7b3165a3b3f919c280b30f8be9554641eab898e48854677a814482aa9c2e2609",
         "signature": "7b3165a3b3f919c280b30f8be9554641eab898e48854677a814482aa9c2e2609"
       },
-      "./src/intersection.ts": {
-        "version": "f30b7fc30d0c322fa2beb8b54ee85e0b8be3b6c937976cc6cc5c589967035be6",
+      "../shared/lib/intersection.d.ts": {
+        "version": "be90c0f7f305fa1f3114fd553cb9905172b1b61ed2a2a59f857dd307028a6691",
         "signature": "be90c0f7f305fa1f3114fd553cb9905172b1b61ed2a2a59f857dd307028a6691"
       },
-      "./src/surface.ts": {
-        "version": "59440bcb4892d2a7ff7a4a3b6cf2bc02dbc337b7a83abaca258ce11a79947766",
+      "../shared/lib/surface.d.ts": {
+        "version": "3706fd33b33c0eb979265a496846be038b554e692aa29f045563a7a92f457540",
         "signature": "3706fd33b33c0eb979265a496846be038b554e692aa29f045563a7a92f457540"
       },
-      "./src/things.ts": {
-        "version": "b5a6ffed575fdcb3bc6649f0b939da3cafe31a23d2d73989791ad094974bd4c3",
+      "../shared/lib/things.d.ts": {
+        "version": "9eb19635a3e2bb43478dcfd4d52af1f5537faf91bb5da45da783645337c19804",
         "signature": "9eb19635a3e2bb43478dcfd4d52af1f5537faf91bb5da45da783645337c19804"
       },
-      "./src/scene.ts": {
-        "version": "009b269619ec974ec6f41a43fffd1866e64ea59cdbc4ee934da0d7459fd74e19",
+      "../shared/lib/camera.d.ts": {
+        "version": "4811a582425d2d13a4ebf007bdc8eed9e5ed1cbbd0b53f42317eb2f526b0c1fa",
+        "signature": "4811a582425d2d13a4ebf007bdc8eed9e5ed1cbbd0b53f42317eb2f526b0c1fa"
+      },
+      "../shared/lib/scene.d.ts": {
+        "version": "70439bbf925f8340816f529fedc1f3ee1f3ed81bdc2d8c84e66de7972528169e",
         "signature": "70439bbf925f8340816f529fedc1f3ee1f3ed81bdc2d8c84e66de7972528169e"
       },
-      "./src/raytrace.ts": {
-        "version": "55c0d692e67c037080f62236c7d2523b51cb89f57efa3c3c16ed38bd0f7cf541",
+      "../shared/lib/imagedata.d.ts": {
+        "version": "5247c8994fe3c1502b74958f8c6605dd5237b2366faa757e86ce9880b5e2ea39",
+        "signature": "5247c8994fe3c1502b74958f8c6605dd5237b2366faa757e86ce9880b5e2ea39"
+      },
+      "../shared/lib/raytrace.d.ts": {
+        "version": "34d23f7bd061ea6a453d05a28f599f63f16295b3de4d1878d128c0206ae13628",
         "signature": "34d23f7bd061ea6a453d05a28f599f63f16295b3de4d1878d128c0206ae13628"
       },
-      "./src/index.ts": {
-        "version": "9a3c39a24de1c07ed79b7074f2ab1b4917338cf59c8e55059899aae167328e91",
+      "../shared/lib/index.d.ts": {
+        "version": "b2be481f87b94227cbd2051407a8f89821c3db8a9407cccae8ddf38d7a775a07",
         "signature": "b2be481f87b94227cbd2051407a8f89821c3db8a9407cccae8ddf38d7a775a07"
+      },
+      "./src/app.ts": {
+        "version": "24ab82f445a3a17e51c514d0363d4dc4ad473a4d758e4bad3f3d95b0ba6ba7f9",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       }
     },
     "options": {
       "target": 2,
       "module": 1,
       "lib": [
+        "lib.dom.d.ts",
         "lib.es2015.d.ts"
       ],
-      "allowSyntheticDefaultImports": true,
-      "composite": true,
       "declaration": true,
-      "noEmitOnError": true,
-      "noImplicitAny": false,
       "outDir": "./lib",
-      "preserveConstEnums": true,
-      "removeComments": true,
       "rootDir": "./src",
-      "sourceMap": true,
+      "composite": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "inlineSourceMap": true,
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
-      "./src/camera.ts": [
-        "./src/vector.ts"
+      "../shared/lib/ray.d.ts": [
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/color.d.ts"
       ],
-      "./src/ray.ts": [
-        "./src/vector.ts",
-        "./src/color.ts"
+      "../shared/lib/intersection.d.ts": [
+        "../shared/lib/things.d.ts",
+        "../shared/lib/ray.d.ts"
       ],
-      "./src/intersection.ts": [
-        "./src/things.ts",
-        "./src/ray.ts"
+      "../shared/lib/surface.d.ts": [
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/color.d.ts"
       ],
-      "./src/surface.ts": [
-        "./src/vector.ts",
-        "./src/color.ts"
+      "../shared/lib/things.d.ts": [
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/intersection.d.ts",
+        "../shared/lib/surface.d.ts",
+        "../shared/lib/ray.d.ts"
       ],
-      "./src/things.ts": [
-        "./src/vector.ts",
-        "./src/intersection.ts",
-        "./src/surface.ts",
-        "./src/ray.ts"
+      "../shared/lib/camera.d.ts": [
+        "../shared/lib/vector.d.ts"
       ],
-      "./src/scene.ts": [
-        "./src/vector.ts",
-        "./src/color.ts",
-        "./src/things.ts",
-        "./src/camera.ts",
-        "./src/surface.ts",
-        "./src/ray.ts"
+      "../shared/lib/scene.d.ts": [
+        "../shared/lib/things.d.ts",
+        "../shared/lib/camera.d.ts",
+        "../shared/lib/ray.d.ts"
       ],
-      "./src/raytrace.ts": [
-        "./src/scene.ts",
-        "./src/vector.ts",
-        "./src/intersection.ts",
-        "./src/color.ts",
-        "./src/ray.ts",
-        "./src/things.ts",
-        "./src/camera.ts",
-        "./src/imagedata.ts"
+      "../shared/lib/raytrace.d.ts": [
+        "../shared/lib/scene.d.ts",
+        "../shared/lib/imagedata.d.ts"
       ],
-      "./src/index.ts": [
-        "./src/raytrace.ts",
-        "./src/camera.ts",
-        "./src/vector.ts",
-        "./src/scene.ts",
-        "./src/surface.ts",
-        "./src/things.ts"
+      "../shared/lib/index.d.ts": [
+        "../shared/lib/raytrace.d.ts",
+        "../shared/lib/camera.d.ts",
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/scene.d.ts",
+        "../shared/lib/surface.d.ts",
+        "../shared/lib/things.d.ts"
+      ],
+      "./src/app.ts": [
+        "../shared/lib/index.d.ts"
       ]
     },
     "exportedModulesMap": {
-      "./src/camera.ts": [
-        "./src/vector.ts"
+      "../shared/lib/ray.d.ts": [
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/color.d.ts"
       ],
-      "./src/ray.ts": [
-        "./src/vector.ts",
-        "./src/color.ts"
+      "../shared/lib/intersection.d.ts": [
+        "../shared/lib/things.d.ts",
+        "../shared/lib/ray.d.ts"
       ],
-      "./src/intersection.ts": [
-        "./src/things.ts",
-        "./src/ray.ts"
+      "../shared/lib/surface.d.ts": [
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/color.d.ts"
       ],
-      "./src/surface.ts": [
-        "./src/vector.ts",
-        "./src/color.ts"
+      "../shared/lib/things.d.ts": [
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/intersection.d.ts",
+        "../shared/lib/surface.d.ts",
+        "../shared/lib/ray.d.ts"
       ],
-      "./src/things.ts": [
-        "./src/ray.ts",
-        "./src/intersection.ts",
-        "./src/vector.ts",
-        "./src/surface.ts"
+      "../shared/lib/camera.d.ts": [
+        "../shared/lib/vector.d.ts"
       ],
-      "./src/scene.ts": [
-        "./src/things.ts",
-        "./src/ray.ts",
-        "./src/camera.ts"
+      "../shared/lib/scene.d.ts": [
+        "../shared/lib/things.d.ts",
+        "../shared/lib/camera.d.ts",
+        "../shared/lib/ray.d.ts"
       ],
-      "./src/raytrace.ts": [
-        "./src/scene.ts",
-        "./src/imagedata.ts"
+      "../shared/lib/raytrace.d.ts": [
+        "../shared/lib/scene.d.ts",
+        "../shared/lib/imagedata.d.ts"
       ],
-      "./src/index.ts": [
-        "./src/raytrace.ts",
-        "./src/camera.ts",
-        "./src/vector.ts",
-        "./src/scene.ts",
-        "./src/surface.ts",
-        "./src/things.ts"
+      "../shared/lib/index.d.ts": [
+        "../shared/lib/raytrace.d.ts",
+        "../shared/lib/camera.d.ts",
+        "../shared/lib/vector.d.ts",
+        "../shared/lib/scene.d.ts",
+        "../shared/lib/surface.d.ts",
+        "../shared/lib/things.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts",
+      "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.dom.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts",
@@ -209,17 +210,18 @@
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-      "./src/index.ts",
-      "./src/vector.ts",
-      "./src/camera.ts",
-      "./src/color.ts",
-      "./src/imagedata.ts",
-      "./src/ray.ts",
-      "./src/intersection.ts",
-      "./src/surface.ts",
-      "./src/things.ts",
-      "./src/scene.ts",
-      "./src/raytrace.ts"
+      "./src/app.ts",
+      "../shared/lib/vector.d.ts",
+      "../shared/lib/color.d.ts",
+      "../shared/lib/ray.d.ts",
+      "../shared/lib/intersection.d.ts",
+      "../shared/lib/surface.d.ts",
+      "../shared/lib/things.d.ts",
+      "../shared/lib/camera.d.ts",
+      "../shared/lib/scene.d.ts",
+      "../shared/lib/imagedata.d.ts",
+      "../shared/lib/raytrace.d.ts",
+      "../shared/lib/index.d.ts"
     ]
   },
   "version": "3.6.2"
