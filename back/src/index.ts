@@ -6,9 +6,10 @@ import path from 'path';
 
 import bmp from 'bmp-js';
 
-import RayTracer from '../lib/raytrace';
-import { defaultScene } from '../lib/scene';
+// import RayTracer from '../lib/raytrace';
+// import { defaultScene } from '../lib/scene';
 
+import RayTracer, { defaultScene } from '@python36/raytrace';
 
 const PORT = process.env.PORT || 1234;
 

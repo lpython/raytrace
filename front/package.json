@@ -1,25 +1,18 @@
 {
-  "name": "@python36/raytrace",
-  "version": "1.0.6",
+  "name": "raytrace-web-basic",
+  "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "dev-not-working": "ts-node-dev --respawn --transpileOnly src/server.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bmp-js": "^0.1.0",
-    "ts-node-dev": "^1.0.0-pre.42",
-    "typescript": "^3.5.1"
+    "@python36/raytrace": "1.2.0"
   },
-  "main": "dst/index.js",
-  
-  "nodemonConfig": {
-    "ignore": [
-      "lib/*"
-    ],
-    "delay": "2500"
+  "devDependencies": {
+    "typescript": "^3.6.2"
   }
 }
