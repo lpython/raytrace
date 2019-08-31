@@ -5,13 +5,13 @@
   "scripts": {
     "build": "tsc ",
     "watch": "nodemon dist/web.js"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bmp-js": "^0.1.0",
+    "ts-node-dev": "^1.0.0-pre.42",
     "typescript": "^3.5.1"
   },
   "main": "dist/index.js",
@@ -21,7 +21,9 @@
     "express": "^4.17.1"
   },
   "nodemonConfig": {
-    "ignore": ["lib/*"],
+    "ignore": [
+      "lib/*"
+    ],
     "delay": "2500"
   }
 }
