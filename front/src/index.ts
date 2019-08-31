@@ -6,8 +6,8 @@ import path from 'path';
 
 import bmp from 'bmp-js';
 
-import RayTracer from './raytrace';
-import { defaultScene } from './scene';
+import RayTracer from '../lib/raytrace';
+import { defaultScene } from '../lib/scene';
 
 
 const PORT = process.env.PORT || 1234;

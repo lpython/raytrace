@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "lib": ["es2015"],                             /* Specify library files to be included in the compilation. */
+
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "declaration": true,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "./lib/", 
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "rootDir": "./src", 
+    "sourceMap": true,
+    // "watch": true
+  },
+  "include": [
+      "./src/**/*.ts",
+  ]
+}

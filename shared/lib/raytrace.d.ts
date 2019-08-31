@@ -1,4 +1,5 @@
 import Scene from './scene';
+import ImageData from './imageData';
 export default class RayTracer {
     private maxDepth;
     private intersections;
@@ -7,6 +8,5 @@ export default class RayTracer {
     private shade;
     private getReflectionColor;
     private getNaturalColor;
-    render(scene: Scene, ctx: CanvasRenderingContext2D, screenWidth: number, screenHeight: number): void;
     renderToImage(scene: Scene, image: ImageData): void;
 }

@@ -5,7 +5,8 @@ import Intersection from './intersection';
 import Color from './color';
 import Ray, { Light } from './ray';
 import Thing from './things';
-import Camera from './camera'
+import Camera from './camera';
+import ImageData from './imageData';
 
 export default class RayTracer {
   private maxDepth = 5;
@@ -78,21 +79,21 @@ export default class RayTracer {
     return scene.lights.reduce(addLight, Color.defaultColor);
   }
 
-  render(scene: Scene, ctx: CanvasRenderingContext2D, screenWidth: number, screenHeight: number) {
-    var getPoint = (x: number, y: number, camera: Camera) => {
-      var recenterX = (x: number) => (x - (screenWidth / 2.0)) / 2.0 / screenWidth;
-      var recenterY = (y: number) => - (y - (screenHeight / 2.0)) / 2.0 / screenHeight;
-      return Vector.norm(Vector.plus(camera.forward, Vector.plus(Vector.times(recenterX(x), camera.right), Vector.times(recenterY(y), camera.up))));
-    }
-    for (var y = 0; y < screenHeight; y++) {
-      for (var x = 0; x < screenWidth; x++) {
-        var color = this.traceRay({ start: scene.camera.pos, dir: getPoint(x, y, scene.camera) }, scene, 0);
-        var c = Color.toDrawingColor(color);
-        ctx.fillStyle = "rgb(" + String(c.r) + ", " + String(c.g) + ", " + String(c.b) + ")";
-        ctx.fillRect(x, y, x + 1, y + 1);
-      }
-    }
-  }
+  // render(scene: Scene, ctx: CanvasRenderingContext2D, screenWidth: number, screenHeight: number) {
+  //   var getPoint = (x: number, y: number, camera: Camera) => {
+  //     var recenterX = (x: number) => (x - (screenWidth / 2.0)) / 2.0 / screenWidth;
+  //     var recenterY = (y: number) => - (y - (screenHeight / 2.0)) / 2.0 / screenHeight;
+  //     return Vector.norm(Vector.plus(camera.forward, Vector.plus(Vector.times(recenterX(x), camera.right), Vector.times(recenterY(y), camera.up))));
+  //   }
+  //   for (var y = 0; y < screenHeight; y++) {
+  //     for (var x = 0; x < screenWidth; x++) {
+  //       var color = this.traceRay({ start: scene.camera.pos, dir: getPoint(x, y, scene.camera) }, scene, 0);
+  //       var c = Color.toDrawingColor(color);
+  //       ctx.fillStyle = "rgb(" + String(c.r) + ", " + String(c.g) + ", " + String(c.b) + ")";
+  //       ctx.fillRect(x, y, x + 1, y + 1);
+  //     }
+  //   }
+  // }
 
   renderToImage(scene: Scene, image: ImageData) {
     var height = image.height;
