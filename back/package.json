@@ -6,7 +6,7 @@
     "build": "tsc",
     "start": "node lib/index.js",
     "dev-not-working": "ts-node-dev --respawn --transpileOnly src/server.ts",
-    "watch-front": "cpx \"../front/lib/*\" \"./public/\" -w"
+    "watch-front": "cpx \"../front/dist/*\" \"./public/\" -w"
   },
   "keywords": [],
   "author": "",

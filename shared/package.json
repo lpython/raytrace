@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "dependencies": {
     "typescript": "^3.5.1"
   }

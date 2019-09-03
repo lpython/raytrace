@@ -92,13 +92,14 @@
     },
     "options": {
       "target": 2,
-      "module": 1,
+      "module": 3,
       "lib": [
         "lib.es2015.d.ts"
       ],
       "allowSyntheticDefaultImports": true,
       "composite": true,
       "declaration": true,
+      "declarationMap": true,
       "noEmitOnError": true,
       "noImplicitAny": false,
       "outDir": "./lib",
@@ -209,7 +210,6 @@
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-      "./src/index.ts",
       "./src/vector.ts",
       "./src/camera.ts",
       "./src/color.ts",
@@ -219,7 +219,8 @@
       "./src/surface.ts",
       "./src/things.ts",
       "./src/scene.ts",
-      "./src/raytrace.ts"
+      "./src/raytrace.ts",
+      "./src/index.ts"
     ]
   },
   "version": "3.6.2"

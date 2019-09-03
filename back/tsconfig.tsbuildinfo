@@ -317,50 +317,6 @@
         "version": "1f92cdebe2b1e0e6309ccdb6e8700cfd2d3e7131c7842f91b38ed1e4ff2a7090",
         "signature": "1f92cdebe2b1e0e6309ccdb6e8700cfd2d3e7131c7842f91b38ed1e4ff2a7090"
       },
-      "../shared/lib/vector.d.ts": {
-        "version": "76cd722134bf64280e52aa6be158132b558fe26c4c2aaac5413e1501decbd567",
-        "signature": "76cd722134bf64280e52aa6be158132b558fe26c4c2aaac5413e1501decbd567"
-      },
-      "../shared/lib/color.d.ts": {
-        "version": "255fc9ee61aa17d6f7bed4db2d9c81f2e8adc9cc942541fae989a7a3ecd573e6",
-        "signature": "255fc9ee61aa17d6f7bed4db2d9c81f2e8adc9cc942541fae989a7a3ecd573e6"
-      },
-      "../shared/lib/ray.d.ts": {
-        "version": "7b3165a3b3f919c280b30f8be9554641eab898e48854677a814482aa9c2e2609",
-        "signature": "7b3165a3b3f919c280b30f8be9554641eab898e48854677a814482aa9c2e2609"
-      },
-      "../shared/lib/intersection.d.ts": {
-        "version": "be90c0f7f305fa1f3114fd553cb9905172b1b61ed2a2a59f857dd307028a6691",
-        "signature": "be90c0f7f305fa1f3114fd553cb9905172b1b61ed2a2a59f857dd307028a6691"
-      },
-      "../shared/lib/surface.d.ts": {
-        "version": "3706fd33b33c0eb979265a496846be038b554e692aa29f045563a7a92f457540",
-        "signature": "3706fd33b33c0eb979265a496846be038b554e692aa29f045563a7a92f457540"
-      },
-      "../shared/lib/things.d.ts": {
-        "version": "9eb19635a3e2bb43478dcfd4d52af1f5537faf91bb5da45da783645337c19804",
-        "signature": "9eb19635a3e2bb43478dcfd4d52af1f5537faf91bb5da45da783645337c19804"
-      },
-      "../shared/lib/camera.d.ts": {
-        "version": "4811a582425d2d13a4ebf007bdc8eed9e5ed1cbbd0b53f42317eb2f526b0c1fa",
-        "signature": "4811a582425d2d13a4ebf007bdc8eed9e5ed1cbbd0b53f42317eb2f526b0c1fa"
-      },
-      "../shared/lib/scene.d.ts": {
-        "version": "70439bbf925f8340816f529fedc1f3ee1f3ed81bdc2d8c84e66de7972528169e",
-        "signature": "70439bbf925f8340816f529fedc1f3ee1f3ed81bdc2d8c84e66de7972528169e"
-      },
-      "../shared/lib/imagedata.d.ts": {
-        "version": "5247c8994fe3c1502b74958f8c6605dd5237b2366faa757e86ce9880b5e2ea39",
-        "signature": "5247c8994fe3c1502b74958f8c6605dd5237b2366faa757e86ce9880b5e2ea39"
-      },
-      "../shared/lib/raytrace.d.ts": {
-        "version": "34d23f7bd061ea6a453d05a28f599f63f16295b3de4d1878d128c0206ae13628",
-        "signature": "34d23f7bd061ea6a453d05a28f599f63f16295b3de4d1878d128c0206ae13628"
-      },
-      "../shared/lib/index.d.ts": {
-        "version": "289cbcd2b666c0a9f4e6ea37c5ac25351ffe919959868cb11e4310e0c3ad18cd",
-        "signature": "289cbcd2b666c0a9f4e6ea37c5ac25351ffe919959868cb11e4310e0c3ad18cd"
-      },
       "./src/index.ts": {
         "version": "0fbb51b433c41e33ff5d6191e0f9420abe3b94aeaddcf3ec7c488cf619a1e5f4",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
@@ -803,77 +759,10 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../shared/lib/vector.d.ts": [
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/color.d.ts": [
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/ray.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/color.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/intersection.d.ts": [
-        "../shared/lib/things.d.ts",
-        "../shared/lib/ray.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/surface.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/color.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/things.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/intersection.d.ts",
-        "../shared/lib/surface.d.ts",
-        "../shared/lib/ray.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/camera.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/scene.d.ts": [
-        "../shared/lib/things.d.ts",
-        "../shared/lib/camera.d.ts",
-        "../shared/lib/ray.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/imagedata.d.ts": [
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/raytrace.d.ts": [
-        "../shared/lib/scene.d.ts",
-        "../shared/lib/imagedata.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/index.d.ts": [
-        "../shared/lib/raytrace.d.ts",
-        "../shared/lib/camera.d.ts",
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/scene.d.ts",
-        "../shared/lib/surface.d.ts",
-        "../shared/lib/things.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "./src/index.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/node/path.d.ts",
         "./src/bmp-js.d.ts",
-        "../shared/lib/index.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ]
@@ -1254,72 +1143,6 @@
         "./node_modules/@types/express-serve-static-core/index.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/vector.d.ts": [
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/index.d.ts": [
-        "../shared/lib/raytrace.d.ts",
-        "../shared/lib/camera.d.ts",
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/scene.d.ts",
-        "../shared/lib/surface.d.ts",
-        "../shared/lib/things.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/camera.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/scene.d.ts": [
-        "../shared/lib/things.d.ts",
-        "../shared/lib/camera.d.ts",
-        "../shared/lib/ray.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/raytrace.d.ts": [
-        "../shared/lib/scene.d.ts",
-        "../shared/lib/imagedata.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/things.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/intersection.d.ts",
-        "../shared/lib/surface.d.ts",
-        "../shared/lib/ray.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/intersection.d.ts": [
-        "../shared/lib/things.d.ts",
-        "../shared/lib/ray.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/surface.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/color.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/ray.d.ts": [
-        "../shared/lib/vector.d.ts",
-        "../shared/lib/color.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/color.d.ts": [
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../shared/lib/imagedata.d.ts": [
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1350,12 +1173,19 @@
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "c:/users/alex/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
-      "../shared/lib/vector.d.ts",
-      "../shared/lib/camera.d.ts",
-      "../shared/lib/surface.d.ts",
-      "../shared/lib/ray.d.ts",
-      "../shared/lib/color.d.ts",
-      "../shared/lib/imagedata.d.ts",
+      [
+        "./src/index.ts",
+        [
+          {
+            "file": "./src/index.ts",
+            "start": 290,
+            "length": 20,
+            "messageText": "Cannot find module '@python36/raytrace'.",
+            "category": 1,
+            "code": 2307
+          }
+        ]
+      ],
       "./src/bmp-js.d.ts",
       "./node_modules/@types/node/globals.d.ts",
       "./node_modules/@types/node/assert.d.ts",
@@ -1407,13 +1237,7 @@
       "./node_modules/@types/serve-static/index.d.ts",
       "./node_modules/@types/connect/index.d.ts",
       "./node_modules/@types/body-parser/index.d.ts",
-      "./node_modules/@types/express/index.d.ts",
-      "../shared/lib/intersection.d.ts",
-      "../shared/lib/things.d.ts",
-      "../shared/lib/scene.d.ts",
-      "../shared/lib/raytrace.d.ts",
-      "../shared/lib/index.d.ts",
-      "./src/index.ts"
+      "./node_modules/@types/express/index.d.ts"
     ]
   },
   "version": "3.6.2"

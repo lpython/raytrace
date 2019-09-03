@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "module": "umd", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": ["es2015"],                             /* Specify library files to be included in the compilation. */
 
     "allowSyntheticDefaultImports": true,
     "composite": true,
     "declaration": true,
+    "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
+
     "noEmitOnError": true,
     "noImplicitAny": false,
     "outDir": "./lib/", 
