@@ -110,6 +110,7 @@ function onLoad() {
   // TODO webworker
 
   renderButton.addEventListener('click', () => {
+    console.log('selector value:', processorSelector.value)
     let processor = processors[processorSelector.value];
     if (processor) {
       processor();
@@ -128,6 +129,38 @@ function onLoad() {
     'golang-back': () => {
       let xml = sceneInput.value;
       fetch("http://localhost:5600/gen_xml.png?" + "xml-scene=" + encodeURI(xml), {
+        "headers": {
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+          "accept-language": "en-US,en;q=0.9",
+        },
+        "referrerPolicy": "no-referrer-when-downgrade",
+        "body": null,
+        "method": "GET",
+        "mode": "cors"
+      })
+        .then(res => res.blob())
+        .then(blob => {
+          return new Promise((resolve, reject) => {
+            const reader = new FileReader()
+            reader.onloadend = () => resolve(<string>reader.result)
+            reader.onerror = reject
+            reader.readAsDataURL(blob)
+          })
+        })
+        .then(v => {
+          let i = document.createElement('img');
+          i.src = <string>v;
+          console.log(i.src);
+
+          document.body.appendChild(i);
+        })
+        .catch(err => {
+          console.log({ err });
+        });
+    },
+    'typescript-back': () => {
+      let xml = sceneInput.value;
+      fetch("http://localhost:1234/gen.bmp?" + "xml-scene=" + encodeURI(xml), {
         "headers": {
           "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
           "accept-language": "en-US,en;q=0.9",

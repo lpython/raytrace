@@ -92,7 +92,7 @@
     },
     "options": {
       "target": 2,
-      "module": 3,
+      "module": 1,
       "lib": [
         "lib.es2015.d.ts"
       ],

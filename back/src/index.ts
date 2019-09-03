@@ -1,13 +1,10 @@
-// const express = require('express');
-// const path = require('path');
-
-import express from 'express';
 import path from 'path';
 
+import express from 'express';
 import bmp from 'bmp-js';
 
-// import RayTracer from '../lib/raytrace';
-// import { defaultScene } from '../lib/scene';
+import cors from 'cors';
+ 
 
 import RayTracer, { defaultScene } from '@python36/raytrace';
 
@@ -22,6 +19,7 @@ const int = (s: string) => {
 }
 
 express()
+  .use(cors())
   .use(express.static(path.join(__dirname, '/../', 'public')))
   .get('/gen.bmp', (req, res) => {
     const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
