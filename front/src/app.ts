@@ -1,5 +1,5 @@
-import RayTracer, { Scene, defaultScene } from '@python36/raytrace';
-
+import RayTracer, { Scene, defaultScene, emptyScene } from '@python36/raytrace';
+import { Parse, basicSceneXML } from '@python36/sceneXML';
 
 //Scene input was attempt to provide textarea with live raytrace updates on user input.
 //Due to Types lost on compile, alternative solution needed.
@@ -16,6 +16,8 @@ function onLoad() {
 
   const rayTracer = new RayTracer();
 
+  sceneInput.value = basicSceneXML;
+
   let ctxMaybe = canv.getContext("2d");
   if (ctxMaybe == null) { return; }
 
@@ -26,7 +28,6 @@ function onLoad() {
   let img: ImageData;
   let scene: Scene = defaultScene();
 
-  // sceneInput.value = DefaultXML();
 
   let renewRaytrace = () => {
     const start = performance.now();
@@ -60,27 +61,8 @@ function onLoad() {
 
   let outputRenderImage = () => {
     createImageBitmap(img, 0, 0, size, size)
-      .then(img => ctx.drawImage(img, 0, 0, canv.width, canv.height));
+      .then(imageBitmap => ctx.drawImage(imageBitmap, 0, 0, canv.width, canv.height));
   }
-
-
-  // let sceneXMLFromTextarea = () => {
-  //   try {
-  //     scene = ParseXMLToScene(sceneInput.value);
-  //   }
-  //   catch (error) {
-  //     console.error('sceneXMLFromTextarea()', error);
-  //     //TODO refactor clearing of button
-  //     ['btn-primary', 'btn-success', 'btn-warning', 'btn-danger']
-  //       .forEach(className => { elapsedButton.classList.remove(className); });
-
-  //     elapsedButton.classList.add('btn-danger');
-  //     elapsedButton.textContent = 'Invalid XML';
-
-  //     scene = emptyScene();
-  //   }
-  // };
-
 
 
   window.addEventListener('resize', () => {
@@ -90,7 +72,7 @@ function onLoad() {
   });
 
   sceneSelector.addEventListener('change', () => {
-    // scene = [emptyScene, defaultScene, scene2][parseInt(sceneSelector.value)]();
+    // scene = [emptyScene, defaultScene, scene2][parseInt(sceneSelector.value)](); 
     scene = defaultScene();
     renewRaytrace();
     outputRenderImage();
@@ -105,9 +87,6 @@ function onLoad() {
   processorSelector.addEventListener('change', () => {
     processorSelector.value
   })
-
-  // TODO Bootstrap pop up noticies
-  // TODO webworker
 
   renderButton.addEventListener('click', () => {
     console.log('selector value:', processorSelector.value)
@@ -189,11 +168,32 @@ function onLoad() {
         .catch(err => {
           console.log({ err });
         });
-    },
+    }, 
     'typescript-front': () => {
-      // Front
-      // sceneXMLFromTextarea();
-      renewRaytrace();
+      console.log('typescript-front');
+
+      let result: Scene | undefined;
+      
+      try {
+        result = Parse(sceneInput.value);
+      }
+      catch (error) {
+        console.error('Error during XML parsing:', error);
+      }
+
+      if (result) {
+        scene = result;
+        renewRaytrace();
+      } else {
+        scene = emptyScene();
+        renewRaytrace();
+
+        ['btn-primary', 'btn-success', 'btn-warning', 'btn-danger']
+          .forEach(className => { elapsedButton.classList.remove(className); });
+
+        elapsedButton.classList.add('btn-danger');
+        elapsedButton.textContent = 'Invalid XML';
+      }
       outputRenderImage();
     }
   }

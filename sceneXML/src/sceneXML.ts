@@ -1,11 +1,18 @@
-import * as Surfaces from './surface';
-import Scene from './scene';
-import { Plane, Sphere } from './things';
-import Vector from './vector';
-import Camera from './camera';
-import Color from './color';
-import Thing from './things';
-import { Light } from './ray';
+
+import {
+  Vector,
+  Light, 
+  Color, 
+  Camera,
+  Scene, defaultScene, scene2, emptyScene,
+  Surfaces,
+  Thing, Sphere, Plane
+} from '@python36/raytrace';
+
+import JSDOMParser from 'dom-parser';
+
+console.log('JSDOMParser : ', JSDOMParser)
+
 
 // Throws error on invalid xml
 export default function ParseXMLToScene(xmlInput: string): Scene {
@@ -133,8 +140,10 @@ export default function ParseXMLToScene(xmlInput: string): Scene {
   return scene;
 }
 
-export function DefaultXML(): string {
-  return `
+export const basicSceneXML: string = 
+// export function DefaultXML(): string {
+//  return 
+  `
 <scene>
   <camera pos="3.0, 2.0, 4.0" lookAt="-1.0, 0.5, 0.0" />
   <objects>
@@ -151,5 +160,5 @@ export function DefaultXML(): string {
   </lights>
 </scene>
   `.trim();
-}
+//}
 

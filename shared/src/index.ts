@@ -1,17 +1,19 @@
-import RayTracer from "./raytrace";
+import RayTracer from './raytrace';
+import Vector from './vector';
+import { Light } from './ray';
 import Camera from './camera';
-import Vector from "./vector";
-import Scene, { defaultScene, scene2, emptyScene } from './scene';
-// import ParseSceneXML, { DefaultXML } from './sceneXML';
+import Color from './color';
 import * as Surfaces from './surface';
-import { Sphere, Plane } from './things';
+import Thing, { Sphere, Plane } from './things';
+import Scene, { defaultScene, scene2, emptyScene } from './scene';
 
 export default RayTracer;
 export { 
-  Camera,
   Vector,
-  Scene, defaultScene, scene2, emptyScene,
-  // ParseSceneXML, DefaultXML,
+  Light,
+  Camera,
+  Color,
   Surfaces,
-  Sphere, Plane
+  Thing, Sphere, Plane,
+  Scene, defaultScene, scene2, emptyScene
 };

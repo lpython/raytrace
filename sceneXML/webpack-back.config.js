@@ -1,9 +1,10 @@
 
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: './src/app.ts',
+  entry: './src/index.ts',
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -18,10 +19,11 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle-back.js',
+    path: path.resolve(__dirname, 'lib'),
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist')
+    contentBase: path.join(__dirname, 'lib')
   }
+ 
 };

@@ -1,0 +1,23 @@
+{
+  "name": "@python36/sceneXML",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/bundle.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "webpack --config ./webpack-front.config.js && webpack --config ./webpack-back.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@python36/raytrace": "^1.2.1",
+    "dom-parser": "^0.1.6",
+    "ts-loader": "^6.0.4",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  }
+}

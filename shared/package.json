@@ -1,6 +1,6 @@
 {
   "name": "@python36/raytrace",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "scripts": {
     "build": "tsc"
@@ -10,7 +10,11 @@
   "license": "ISC",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "browser": {
+    "jsdom": false
+  },
   "dependencies": {
+    "jsdom": "^15.1.1",
     "typescript": "^3.5.1"
   }
 }
