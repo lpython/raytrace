@@ -1,8 +1,10 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
+  target: 'node',
   mode: 'development',
   entry: './src/index.ts',
   devtool: 'inline-source-map',
@@ -19,18 +21,9 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
-    filename: 'bundle-front.js',
+    filename: 'bundle-back.js',
     path: path.resolve(__dirname, 'lib'),
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'lib')
-  },
-  plugins: [
-    new webpack.NormalModuleReplacementPlugin(
-      /dom-parser/,
-      
-      './emptyModule'
-      
-    )
-  ]
+  externals: [nodeExternals()]
+ 
 };

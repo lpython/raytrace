@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  target: 'web',
   mode: 'development',
   entry: './src/index.ts',
   devtool: 'inline-source-map',
@@ -19,11 +20,13 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
-    filename: 'bundle-back.js',
+    filename: 'bundle-front.js',
     path: path.resolve(__dirname, 'lib'),
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'lib')
-  }
- 
+  plugins: [
+    new webpack.NormalModuleReplacementPlugin(
+      /dom-parser/,
+      './emptyModule'
+    )
+  ],
 };

@@ -203,7 +203,6 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "./src/index.ts",
       "./node_modules/typescript/lib/lib.es5.d.ts",
       "./node_modules/typescript/lib/lib.es2015.d.ts",
       "./node_modules/typescript/lib/lib.es2015.core.d.ts",
@@ -224,7 +223,8 @@
       "./src/surface.ts",
       "./src/things.ts",
       "./src/scene.ts",
-      "./src/raytrace.ts"
+      "./src/raytrace.ts",
+      "./src/index.ts"
     ]
   },
   "version": "3.6.2"
