@@ -13,10 +13,11 @@ import JSDOMParser from 'dom-parser';
 
 console.log('JSDOMParser : ', JSDOMParser)
 
+const domParser = typeof DOMParser !== "undefined" ? DOMParser : JSDOMParser; 
 
 // Throws error on invalid xml
 export default function ParseXMLToScene(xmlInput: string): Scene {
-  const parser = new DOMParser();
+  const parser = new domParser();
   const xml = parser.parseFromString(xmlInput, 'application/xml');
   console.log('xml', xml);
   const parserErrorNode = xml.getElementsByTagName('parsererror');
@@ -140,10 +141,7 @@ export default function ParseXMLToScene(xmlInput: string): Scene {
   return scene;
 }
 
-export const basicSceneXML: string = 
-// export function DefaultXML(): string {
-//  return 
-  `
+export const basicSceneXML: string = `
 <scene>
   <camera pos="3.0, 2.0, 4.0" lookAt="-1.0, 0.5, 0.0" />
   <objects>
@@ -159,6 +157,7 @@ export const basicSceneXML: string =
     <light pos="0.0, 3.5, 0.0" color="0.21, 0.21, 0.35" /> 
   </lights>
 </scene>
-  `.trim();
+`.trim();
+
 //}
 

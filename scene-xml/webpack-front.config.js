@@ -21,6 +21,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle-front.js',
+    libraryTarget: 'commonjs',
     path: path.resolve(__dirname, 'lib'),
   },
   plugins: [

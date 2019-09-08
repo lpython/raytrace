@@ -22,6 +22,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle-back.js',
+    libraryTarget: 'commonjs',
     path: path.resolve(__dirname, 'lib'),
   },
   externals: [nodeExternals()]

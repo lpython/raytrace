@@ -1,6 +1,9 @@
 import RayTracer, { Scene, defaultScene, emptyScene } from '@python36/raytrace';
 import { Parse, basicSceneXML } from '@python36/scene-xml';
 
+console.log({basicSceneXML})
+
+
 //Scene input was attempt to provide textarea with live raytrace updates on user input.
 //Due to Types lost on compile, alternative solution needed.
 function onLoad() {

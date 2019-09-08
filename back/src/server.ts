@@ -1,11 +1,15 @@
 import path from 'path';
 
 import express from 'express';
+import bodyParser from 'body-parser';
 import bmp from 'bmp-js';
 
 import cors from 'cors';
 
 import RayTracer, { defaultScene } from '@python36/raytrace';
+import { Parse, basicSceneXML } from '@python36/scene-xml';
+
+console.log({Parse, basicSceneXML})
 
 const PORT = process.env.PORT || 1234;
 
@@ -17,48 +21,57 @@ const int = (s: string) => {
   }
 }
 
-express()
-  .use(cors())
-  .use(express.static(path.join(__dirname, '/../', 'public')))
-  .get('/gen.bmp', (req, res) => {
-    const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
-    const height = req.query.height ? Math.max(int(req.query.height),128) : 128;
+const app = express()
 
-    const img = {
-      width,
-      height,
-      data: new Uint8ClampedArray(width * height * 4)
-    };
-    
-    const rayTracer = new RayTracer();
-    rayTracer.renderToImage(defaultScene(), img);
-    
-    ABGRtoRGBA(img.data);
+app.use(cors())
+app.use(express.static(path.join(__dirname, '/../', 'public')))
+app.use(bodyParser.text())
 
-    res.contentType('image/bmp');
-    res.send(bmp.encode(img).data);
+app.get('/gen.bmp', (req, res) => {
+  const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
+  const height = req.query.height ? Math.max(int(req.query.height),128) : 128;
 
-  })
-  .get('/gen2.bmp', (req, res) => {
-    const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
-    const height = req.query.height ? Math.max(int(req.query.height),128) : 128;
+  const img = {
+    width,
+    height,
+    data: new Uint8ClampedArray(width * height * 4)
+  };
+  
+  const rayTracer = new RayTracer();
+  rayTracer.renderToImage(defaultScene(), img);
+  
+  ABGRtoRGBA(img.data);
 
-    const img = {
-      width,
-      height,
-      data: new Uint8ClampedArray(width * height * 4)
-    };
-    
-    const rayTracer = new RayTracer();
-    rayTracer.renderToImage(defaultScene(), img);
-    
-    ABGRtoRGBA(img.data);
+  res.contentType('image/bmp');
+  res.send(bmp.encode(img).data);
 
-    res.contentType('image/bmp');
-    res.send(bmp.encode(img).data);
+})
 
-  })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`))
+app.post('/gen_xml.bmp', (req, res) => {
+  const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
+  const height = req.query.height ? Math.max(int(req.query.height),128) : 128;
+
+  const img = {
+    width,
+    height,
+    data: new Uint8ClampedArray(width * height * 4)
+  };
+
+  console.log(req.headers)
+  console.log(req.body)
+
+  const rayTracer = new RayTracer();
+  const scene = Parse(req.body);
+  rayTracer.renderToImage(scene, img);
+  
+  ABGRtoRGBA(img.data);
+
+  res.contentType('image/bmp');
+  res.send(bmp.encode(img).data);
+
+})
+
+app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 function ABGRtoRGBA(imageData: Uint8ClampedArray) {
   for (let i = 0; i < imageData.length; i += 4) {

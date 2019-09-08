@@ -365,9 +365,69 @@
         "version": "0849192568a267993bde793d7b99056996b08a6e3c3ac652a57f75ba8204ff3f",
         "signature": "0849192568a267993bde793d7b99056996b08a6e3c3ac652a57f75ba8204ff3f"
       },
-      "./src/index.ts": {
-        "version": "8b3bf0b9f216490e5df499195cb53d8ae36183a6e27e06b55c2411bf4b7b2700",
+      "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts": {
+        "version": "65b8c6f20f5502eb4efa83d509e56624c30f43d64987b4444100a14fd2abb87e",
+        "signature": "65b8c6f20f5502eb4efa83d509e56624c30f43d64987b4444100a14fd2abb87e"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts": {
+        "version": "8460393fb3028b935ead64aeccca2ade22a6afd787b74b28efe9ec39ce94bbc4",
+        "signature": "8460393fb3028b935ead64aeccca2ade22a6afd787b74b28efe9ec39ce94bbc4"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts": {
+        "version": "b33af04dd652ad26599b5577f6617b6a143e4447413fc91f0ba4a9c2707f9f23",
+        "signature": "b33af04dd652ad26599b5577f6617b6a143e4447413fc91f0ba4a9c2707f9f23"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/intersection.d.ts": {
+        "version": "836dcc98c3bef1dac5eefb809b6990d03dabbe2564db864c3126183649c1ff9f",
+        "signature": "836dcc98c3bef1dac5eefb809b6990d03dabbe2564db864c3126183649c1ff9f"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts": {
+        "version": "d706b9391aea769e9778b33b8b0a9f80cb42994da29d5b45b50e52ac882ca553",
+        "signature": "d706b9391aea769e9778b33b8b0a9f80cb42994da29d5b45b50e52ac882ca553"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts": {
+        "version": "99c7d964976bbdb73f288544aa7ba547f7ce5b58a2eaeb5d372ba4cc95578e4d",
+        "signature": "99c7d964976bbdb73f288544aa7ba547f7ce5b58a2eaeb5d372ba4cc95578e4d"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts": {
+        "version": "8967bcf55ec0d440267824a45f248fed5d7248c3d296d143e531b2977d6a4f2f",
+        "signature": "8967bcf55ec0d440267824a45f248fed5d7248c3d296d143e531b2977d6a4f2f"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts": {
+        "version": "4e14fb7eed1a0255e5f8b4bb07930f2c71ae083d65f950878e9c91020bff3750",
+        "signature": "4e14fb7eed1a0255e5f8b4bb07930f2c71ae083d65f950878e9c91020bff3750"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/imagedata.d.ts": {
+        "version": "8a9911dca292c852d51dec793ba9364aedbc4424789131f41e1345ae76dd6d70",
+        "signature": "8a9911dca292c852d51dec793ba9364aedbc4424789131f41e1345ae76dd6d70"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/raytrace.d.ts": {
+        "version": "d6747ef204010311e31bc96e10e8ed62842bc3908c213f288bbe381a123ed4e4",
+        "signature": "d6747ef204010311e31bc96e10e8ed62842bc3908c213f288bbe381a123ed4e4"
+      },
+      "../scene-xml/node_modules/@python36/raytrace/lib/index.d.ts": {
+        "version": "8d8500907f7aa59c2d0b01d7cbb22e6f83fe8c927748baa67048f49bcd69da07",
+        "signature": "8d8500907f7aa59c2d0b01d7cbb22e6f83fe8c927748baa67048f49bcd69da07"
+      },
+      "../scene-xml/lib/scenexml.d.ts": {
+        "version": "3c7d49386f4437ab837739ecfc78bff7b455a5cc45246cab25e035af2c8028a7",
+        "signature": "3c7d49386f4437ab837739ecfc78bff7b455a5cc45246cab25e035af2c8028a7"
+      },
+      "../scene-xml/lib/index.d.ts": {
+        "version": "f60152dc7ee01f2cce6512d31bc00be0caa148d83073d72df7ce268df9cff7ae",
+        "signature": "f60152dc7ee01f2cce6512d31bc00be0caa148d83073d72df7ce268df9cff7ae"
+      },
+      "./src/server.ts": {
+        "version": "d26171495e43df4dd350392c797ca2a794858371d15bbc1fdcc2b0caea61fe11",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./node_modules/@types/strip-bom/index.d.ts": {
+        "version": "4006c872e38a2c4e09c593bc0cdd32b7b4f5c4843910bea0def631c483fff6c5",
+        "signature": "4006c872e38a2c4e09c593bc0cdd32b7b4f5c4843910bea0def631c483fff6c5"
+      },
+      "./node_modules/@types/strip-json-comments/index.d.ts": {
+        "version": "ab6aa3a65d473871ee093e3b7b71ed0f9c69e07d1d4295f45c9efd91a771241d",
+        "signature": "ab6aa3a65d473871ee093e3b7b71ed0f9c69e07d1d4295f45c9efd91a771241d"
       }
     },
     "options": {
@@ -878,12 +938,100 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "./src/index.ts": [
+      "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/intersection.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/intersection.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/imagedata.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/raytrace.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/imagedata.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/index.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/raytrace.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/lib/scenexml.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/index.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/lib/index.d.ts": [
+        "../scene-xml/lib/scenexml.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "./src/server.ts": [
         "./node_modules/@types/node/path.d.ts",
         "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/body-parser/index.d.ts",
         "./src/bmp-js.d.ts",
         "./node_modules/@types/cors/index.d.ts",
         "./node_modules/@python36/raytrace/lib/index.d.ts",
+        "../scene-xml/lib/index.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "./node_modules/@types/strip-bom/index.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "./node_modules/@types/strip-json-comments/index.d.ts": [
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ]
@@ -1309,6 +1457,11 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "./node_modules/@types/cors/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "./node_modules/@python36/raytrace/lib/vector.d.ts": [
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
@@ -1375,15 +1528,95 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "./node_modules/@types/cors/index.d.ts": [
-        "./node_modules/@types/express/index.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/intersection.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/intersection.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/imagedata.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/raytrace.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/imagedata.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/node_modules/@python36/raytrace/lib/index.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/raytrace.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+        "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/lib/scenexml.d.ts": [
+        "../scene-xml/node_modules/@python36/raytrace/lib/index.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../scene-xml/lib/index.d.ts": [
+        "../scene-xml/lib/scenexml.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "./node_modules/@types/strip-bom/index.d.ts": [
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "./node_modules/@types/strip-json-comments/index.d.ts": [
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "./node_modules/@types/cors/index.d.ts",
-      "./src/index.ts",
+      "./src/server.ts",
       "./node_modules/typescript/lib/lib.es5.d.ts",
       "./node_modules/typescript/lib/lib.es2015.d.ts",
       "./node_modules/typescript/lib/lib.es2016.d.ts",
@@ -1463,6 +1696,7 @@
       "./node_modules/@types/connect/index.d.ts",
       "./node_modules/@types/body-parser/index.d.ts",
       "./node_modules/@types/express/index.d.ts",
+      "./node_modules/@types/cors/index.d.ts",
       "./node_modules/@python36/raytrace/lib/vector.d.ts",
       "./node_modules/@python36/raytrace/lib/color.d.ts",
       "./node_modules/@python36/raytrace/lib/ray.d.ts",
@@ -1473,7 +1707,22 @@
       "./node_modules/@python36/raytrace/lib/scene.d.ts",
       "./node_modules/@python36/raytrace/lib/imagedata.d.ts",
       "./node_modules/@python36/raytrace/lib/raytrace.d.ts",
-      "./node_modules/@python36/raytrace/lib/index.d.ts"
+      "./node_modules/@python36/raytrace/lib/index.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/vector.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/color.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/ray.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/intersection.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/surface.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/things.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/camera.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/scene.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/imagedata.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/raytrace.d.ts",
+      "../scene-xml/node_modules/@python36/raytrace/lib/index.d.ts",
+      "../scene-xml/lib/scenexml.d.ts",
+      "../scene-xml/lib/index.d.ts",
+      "./node_modules/@types/strip-bom/index.d.ts",
+      "./node_modules/@types/strip-json-comments/index.d.ts"
     ]
   },
   "version": "3.6.2"
