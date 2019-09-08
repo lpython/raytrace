@@ -4,11 +4,14 @@
   "description": "",
   "main": "lib/bundle-back.js",
   "browser": "lib/bundle-front.js",
+  "module" : "lib/index.js", 
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "webpack --config ./webpack-front.config.js && webpack --config ./webpack-back.config.js",
+    "build-es6": "tsc -p tsconfig.es6.json", 
     "watch-front": "webpack --watch --config ./webpack-front.config.js",
     "watch-back": "webpack --watch --config ./webpack-back.config.js",
+    "watch-es6": "tsc -w -p tsconfig.es6.json",
     "watch": "concurrently \"npm:watch-*\" "
   },
   "keywords": [],

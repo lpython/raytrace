@@ -23,7 +23,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.static(path.join(__dirname, '/../', 'public')))
-app.use(bodyParser.text())
+app.use(bodyParser.json())
 
 app.get('/gen.bmp', (req, res) => {
   const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
@@ -46,8 +46,8 @@ app.get('/gen.bmp', (req, res) => {
 })
 
 app.post('/gen_xml', (req, res) => {
-  const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
-  const height = req.query.height ? Math.max(int(req.query.height),128) : 128;
+  const width = req.body.width ? Math.max(req.body.width,128) : 128;
+  const height = req.body.height ? Math.max(req.body.height,128) : 128;
 
   const img = {
     width,
@@ -55,11 +55,8 @@ app.post('/gen_xml', (req, res) => {
     data: new Uint8ClampedArray(width * height * 4)
   };
 
-  console.log(req.headers)
-  console.log(req.body)
-
   const rayTracer = new RayTracer();
-  const scene = xmlToScene(req.body);
+  const scene = xmlToScene(req.body.scene);
   rayTracer.renderToImage(scene, img);
   
   ABGRtoRGBA(img.data);

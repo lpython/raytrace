@@ -90,14 +90,10 @@ function onLoad() {
 
   resSelector.addEventListener('change', () => {
     changeRenderSize();
-    let scene = xmlToScene(sceneInput.value);
-    timedRaytrace(scene);
-    outputRenderImage();
+    // let scene = xmlToScene(sceneInput.value);
+    // timedRaytrace(scene);
+    // outputRenderImage();
   });
-
-  // processorSelector.addEventListener('change', () => {
-  //   processorSelector.value
-  // })
 
   renderButton.addEventListener('click', () => {
     console.log('selector value:', processorSelector.value)
@@ -151,13 +147,20 @@ function onLoad() {
     'typescript-back': () => {
       let xml = sceneInput.value;
 
+      let json = JSON.stringify({
+        scene: xml, 
+        width: size,
+        height: size
+      });
+
       fetch("http://localhost:1234/gen_xml", {
         "headers": {
           "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
           "accept-language": "en-US,en;q=0.9",
+          "content-type": "application/json"
         },
         "referrerPolicy": "no-referrer-when-downgrade",
-        "body": xml,
+        "body": json,
         "method": "POST",
         "mode": "cors"
       })

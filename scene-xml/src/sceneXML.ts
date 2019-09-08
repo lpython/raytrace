@@ -92,24 +92,24 @@ export function xmlToScene(xmlInput: string): Scene {
     }
   }
 
-  (function parseLight(cameraNode: Element) {
-    console.log(cameraNode);
-    const requiredAttributes = ['pos', 'lookAt'];
-    if (requiredAttributes.every(a => cameraNode.hasAttribute(a))) {
-      const posAtt = <string>cameraNode.getAttribute('pos');
-      const lookAtAtt = <string>cameraNode.getAttribute('lookAt');
+  // (function parseLight(cameraNode: Element) {
+    // console.log(cameraNode);
+  const requiredAttributes = ['pos', 'lookAt'];
+  if (requiredAttributes.every(a => cameraNode.hasAttribute(a))) {
+    const posAtt = <string>cameraNode.getAttribute('pos');
+    const lookAtAtt = <string>cameraNode.getAttribute('lookAt');
 
-      let numbers = posAtt.split(',').slice(0, 3).map(s => parseFloat(s));
-      const pos = new Vector(numbers[0], numbers[1], numbers[2]);
-      numbers = lookAtAtt.split(',').slice(0, 3).map(s => parseFloat(s));
-      const lookAt = new Vector(numbers[0], numbers[1], numbers[2]);
+    let numbers = posAtt.split(',').slice(0, 3).map(s => parseFloat(s));
+    const pos = new Vector(numbers[0], numbers[1], numbers[2]);
+    numbers = lookAtAtt.split(',').slice(0, 3).map(s => parseFloat(s));
+    const lookAt = new Vector(numbers[0], numbers[1], numbers[2]);
 
-      camera = new Camera(pos, lookAt);
+    camera = new Camera(pos, lookAt);
     }
-  })(cameraNode);
+  // })(cameraNode);
 
-  console.log(objects);
-  console.log(lights);
+  // console.log(objects);
+  // console.log(lights);
 
   const scene = {
     things: objects,
@@ -117,7 +117,7 @@ export function xmlToScene(xmlInput: string): Scene {
     camera
   };
 
-  console.log('parsed scene : ', scene);
+  // console.log('parsed scene : ', scene);
   return scene;
 }
 
