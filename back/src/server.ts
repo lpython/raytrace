@@ -9,8 +9,6 @@ import cors from 'cors';
 import RayTracer, { defaultScene } from '@python36/raytrace';
 import { Parse, basicSceneXML } from '@python36/scene-xml';
 
-console.log({Parse, basicSceneXML})
-
 const PORT = process.env.PORT || 1234;
 
 const int = (s: string) => {
@@ -47,7 +45,7 @@ app.get('/gen.bmp', (req, res) => {
 
 })
 
-app.post('/gen_xml.bmp', (req, res) => {
+app.post('/gen_xml', (req, res) => {
   const width = req.query.width ? Math.max(int(req.query.width),128) : 128;
   const height = req.query.height ? Math.max(int(req.query.height),128) : 128;
 

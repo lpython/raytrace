@@ -142,14 +142,15 @@ function onLoad() {
     },
     'typescript-back': () => {
       let xml = sceneInput.value;
-      fetch("http://localhost:1234/gen.bmp?" + "xml-scene=" + encodeURI(xml), {
+
+      fetch("http://localhost:1234/gen_xml", {
         "headers": {
           "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
           "accept-language": "en-US,en;q=0.9",
         },
         "referrerPolicy": "no-referrer-when-downgrade",
-        "body": null,
-        "method": "GET",
+        "body": xml,
+        "method": "POST",
         "mode": "cors"
       })
         .then(res => res.blob())

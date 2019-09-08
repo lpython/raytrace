@@ -11,8 +11,6 @@ import {
 
 import JSDOMParser from 'dom-parser';
 
-console.log('JSDOMParser : ', JSDOMParser)
-
 const domParser = typeof DOMParser !== "undefined" ? DOMParser : JSDOMParser; 
 
 // Throws error on invalid xml
@@ -40,6 +38,8 @@ export default function ParseXMLToScene(xmlInput: string): Scene {
   const planeNodes = objectsNode.getElementsByTagName('plane');
   const sphereNodes = objectsNode.getElementsByTagName('sphere');
   const lightNodes = lightsNode.getElementsByTagName('light');
+
+  console.log({planeNodes})
 
   // xml nodes to typescript objects
 

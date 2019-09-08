@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@python36/raytrace": "1.2.0",
-    "@python36/scene-xml": "^1.0.1",
+    "@python36/scene-xml": "^1.1.0",
     "bmp-js": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1"

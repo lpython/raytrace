@@ -1,1 +1,1 @@
-export default { JSDOC : 'wat' }
+export default { }
