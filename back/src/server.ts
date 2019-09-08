@@ -7,7 +7,7 @@ import bmp from 'bmp-js';
 import cors from 'cors';
 
 import RayTracer, { defaultScene } from '@python36/raytrace';
-import { Parse, basicSceneXML } from '@python36/scene-xml';
+import { xmlToScene, samples } from '@python36/scene-xml';
 
 const PORT = process.env.PORT || 1234;
 
@@ -59,7 +59,7 @@ app.post('/gen_xml', (req, res) => {
   console.log(req.body)
 
   const rayTracer = new RayTracer();
-  const scene = Parse(req.body);
+  const scene = xmlToScene(req.body);
   rayTracer.renderToImage(scene, img);
   
   ABGRtoRGBA(img.data);

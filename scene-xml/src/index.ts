@@ -1,5 +1,7 @@
-import Parse, { basicSceneXML } from './sceneXML';
+import { xmlToScene, samples } from './sceneXML';
+
 
 export { 
-  Parse, basicSceneXML,
+  xmlToScene,
+  samples
 };

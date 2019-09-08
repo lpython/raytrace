@@ -1,8 +1,7 @@
 import RayTracer, { Scene, defaultScene, emptyScene } from '@python36/raytrace';
-import { Parse, basicSceneXML } from '@python36/scene-xml';
+import { xmlToScene, samples } from '@python36/scene-xml';
 
-console.log({basicSceneXML})
-
+console.log({xmlToScene, samples})
 
 //Scene input was attempt to provide textarea with live raytrace updates on user input.
 //Due to Types lost on compile, alternative solution needed.
@@ -19,7 +18,7 @@ function onLoad() {
 
   const rayTracer = new RayTracer();
 
-  sceneInput.value = basicSceneXML;
+  sceneInput.value = samples['Default Scene'];
 
   let ctxMaybe = canv.getContext("2d");
   if (ctxMaybe == null) { return; }
@@ -29,10 +28,21 @@ function onLoad() {
   // UI varibles, change due to user events
   let size: number;
   let img: ImageData;
-  let scene: Scene = defaultScene();
 
+  Object.keys(samples).forEach(s => {
+    let option = document.createElement('option');
+    option.textContent = s;
+    option.value = s;
+    sceneSelector.appendChild(option);
+  });
 
-  let renewRaytrace = () => {
+  sceneSelector.value = 'Default Scene';
+
+  const inputToRaytrace = () => xmlToRaytrace(sceneInput.value);
+
+  const xmlToRaytrace = (xml: string) => timedRaytrace(xmlToScene(xml));
+
+  const timedRaytrace = (scene: Scene) => {
     const start = performance.now();
     rayTracer.renderToImage(scene, img);
     const end = performance.now();
@@ -67,7 +77,6 @@ function onLoad() {
       .then(imageBitmap => ctx.drawImage(imageBitmap, 0, 0, canv.width, canv.height));
   }
 
-
   window.addEventListener('resize', () => {
     resizeCanvas();
     resizeTextarea();
@@ -75,21 +84,20 @@ function onLoad() {
   });
 
   sceneSelector.addEventListener('change', () => {
-    // scene = [emptyScene, defaultScene, scene2][parseInt(sceneSelector.value)](); 
-    scene = defaultScene();
-    renewRaytrace();
-    outputRenderImage();
+    let xml = samples[sceneSelector.value];
+    sceneInput.value = xml;
   });
 
   resSelector.addEventListener('change', () => {
     changeRenderSize();
-    renewRaytrace();
+    let scene = xmlToScene(sceneInput.value);
+    timedRaytrace(scene);
     outputRenderImage();
   });
 
-  processorSelector.addEventListener('change', () => {
-    processorSelector.value
-  })
+  // processorSelector.addEventListener('change', () => {
+  //   processorSelector.value
+  // })
 
   renderButton.addEventListener('click', () => {
     console.log('selector value:', processorSelector.value)
@@ -102,7 +110,7 @@ function onLoad() {
   });
 
   changeRenderSize();
-  renewRaytrace();
+  inputToRaytrace();
   resizeCanvas();
   resizeTextarea();
   outputRenderImage();
@@ -155,19 +163,16 @@ function onLoad() {
       })
         .then(res => res.blob())
         .then(blob => {
-          return new Promise((resolve, reject) => {
-            const reader = new FileReader()
-            reader.onloadend = () => resolve(<string>reader.result)
-            reader.onerror = reject
-            reader.readAsDataURL(blob)
-          })
-        })
-        .then(v => {
-          let i = document.createElement('img');
-          i.src = <string>v;
-          console.log(i.src);
+          // var ctx = this.getContext('2d');
 
-          document.body.appendChild(i);
+          let imageResponse = new Image();
+        
+          imageResponse.onload = () => {
+            createImageBitmap(imageResponse, 0, 0, size, size)
+              .then(imageBitmap => ctx.drawImage(imageBitmap, 0, 0, canv.width, canv.height));
+          }
+        
+          imageResponse.src = URL.createObjectURL(blob);
         })
         .catch(err => {
           console.log({ err });
@@ -179,18 +184,19 @@ function onLoad() {
       let result: Scene | undefined;
       
       try {
-        result = Parse(sceneInput.value);
+        result = xmlToScene(sceneInput.value);
       }
       catch (error) {
         console.error('Error during XML parsing:', error);
       }
 
       if (result) {
-        scene = result;
-        renewRaytrace();
+        timedRaytrace(result);
       } else {
-        scene = emptyScene();
-        renewRaytrace();
+        // let scene = xmlToScene(samples['empty'])
+
+        // scene = emptyScene();
+        timedRaytrace(emptyScene());
 
         ['btn-primary', 'btn-success', 'btn-warning', 'btn-danger']
           .forEach(className => { elapsedButton.classList.remove(className); });

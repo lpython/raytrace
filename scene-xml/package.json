@@ -6,7 +6,10 @@
   "browser": "lib/bundle-front.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "webpack --config ./webpack-front.config.js && webpack --config ./webpack-back.config.js"
+    "build": "webpack --config ./webpack-front.config.js && webpack --config ./webpack-back.config.js",
+    "watch-front": "webpack --watch --config ./webpack-front.config.js",
+    "watch-back": "webpack --watch --config ./webpack-back.config.js",
+    "watch": "concurrently \"npm:watch-*\" "
   },
   "keywords": [],
   "author": "",
@@ -20,6 +23,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
+    "concurrently": "^4.1.2",
     "typescript": "^3.6.2"
   }
 }
