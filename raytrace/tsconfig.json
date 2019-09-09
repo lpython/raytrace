@@ -16,7 +16,6 @@
     "removeComments": true,
     "rootDir": "./src", 
     "sourceMap": true,
-    // "watch": true
   },
   "include": [
       "./src/**/*.ts",

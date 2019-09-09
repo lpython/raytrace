@@ -153,7 +153,7 @@ function onLoad() {
         height: size
       });
 
-      fetch("http://localhost:1234/gen_xml", {
+      fetch("gen_xml", {
         "headers": {
           "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
           "accept-language": "en-US,en;q=0.9",
