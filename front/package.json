@@ -2,14 +2,15 @@
   "name": "raytrace-web-basic",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "author": "Alex M (lpython)",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+
   "devDependencies": {
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.0.4",

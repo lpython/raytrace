@@ -2,15 +2,16 @@
   "name": "@python36/raytrace-node",
   "version": "1.0.6",
   "description": "",
+  "keywords": [],
+  "author": "Alex M (lpython)",
+  "license": "ISC",
   "scripts": {
     "start": "node lib/server.js",
     "build": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly src/server.ts",
     "watch-front": "cpx \"../front/dist/*\" \"./public/\" -w"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+
   "dependencies": {
     "@python36/raytrace": "1.2.0",
     "@python36/scene-xml": "^1.1.0",
