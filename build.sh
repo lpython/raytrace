@@ -2,25 +2,35 @@
 
 echo 'Starting build'
 
+set -x 
+
 # Libraries
 ## raytrace
-npm install --prefix raytrace
-npm run build --prefix raytrace
-rm -r raytrace/node_modules/
+cd raytrace/
+npm install 
+npm run build
+rm -r /node_modules/
+cd ..
 
 ## scene-xml
-npm install --prefix scene-xml
-npm run build --prefix scene-xml
-rm -r scene-xml/node_modules/
+cd scene-xml/
+npm install 
+npm run build 
+rm -r /node_modules/
+cd..
 
 # front (vanillaJS)
-npm install --prefix front
-npm run build --prefix front
+cd front/
+npm install
+npm run build
 rm -r front/node_modules/
+cd ..
 
 # back 
-npm install --prefix back
-npm run build --prefix back
+cd back/
+npm install
+npm run build
+cd ..
 
 cp -r /front/dist/* /back/public/
 
