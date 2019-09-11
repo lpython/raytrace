@@ -55,6 +55,6 @@
     "./src/**/*.ts",
   ],
   "references": [
-    { "path": "../shared" }
+    { "path": "../raytrace" }
   ]
 }

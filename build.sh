@@ -7,28 +7,28 @@ set -x
 # Libraries
 ## raytrace
 cd raytrace/
-npm install 
+npm install --dev
 npm run build
-rm -r /node_modules/
+rm -r node_modules/
 cd ..
 
 ## scene-xml
 cd scene-xml/
-npm install 
+npm install --dev
 npm run build 
-rm -r /node_modules/
-cd..
+rm -r node_modules/
+cd ..
 
 # front (vanillaJS)
 cd front/
-npm install
+npm install --dev
 npm run build
-rm -r front/node_modules/
+rm -r node_modules/
 cd ..
 
 # back 
 cd back/
-npm install
+npm install --dev
 npm run build
 cd ..
 
