@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "build": "build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpython/raytrace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lpython/raytrace/issues"
+  },
+  "homepage": "https://github.com/lpython/raytrace#readme"
+}
