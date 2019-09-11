@@ -32,6 +32,6 @@ npm install --dev
 npm run build
 cd ..
 
-cp -r -v /front/dist/* /back/public/
+cp -r -v front/dist/* back/public/
 
 echo 'Finished build'
