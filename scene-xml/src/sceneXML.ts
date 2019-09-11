@@ -41,7 +41,7 @@ export function xmlToScene(xmlInput: string): Scene {
 
   for (let p of planeNodes) {
     const requiredAttributes = ['pos', 'offset', 'surface'];
-    if (requiredAttributes.every(a => p.hasAttribute(a))) {
+    if (requiredAttributes.every(a => !!p.getAttribute(a))) {
       const posAtt = <string>p.getAttribute('pos');
       const offsetAtt = <string>p.getAttribute('offset');
       const surfaceAtt = <string>p.getAttribute('surface');
@@ -60,7 +60,7 @@ export function xmlToScene(xmlInput: string): Scene {
 
   for (let s of sphereNodes) {
     const requiredAttributes = ['pos', 'size', 'surface'];
-    if (requiredAttributes.every(a => s.hasAttribute(a))) {
+    if (requiredAttributes.every(a => !!s.getAttribute(a))) {
       const posAtt = <string>s.getAttribute('pos');
       const sizeAtt = <string>s.getAttribute('size');
       const surfaceAtt = <string>s.getAttribute('surface');
@@ -80,7 +80,7 @@ export function xmlToScene(xmlInput: string): Scene {
 
   for (let l of lightNodes) {
     const requiredAttributes = ['pos', 'color'];
-    if (requiredAttributes.every(a => l.hasAttribute(a))) {
+    if (requiredAttributes.every(a => !!l.getAttribute(a))) {
       const posAtt = <string>l.getAttribute('pos');
       const colorAtt = <string>l.getAttribute('color');
 
@@ -95,7 +95,7 @@ export function xmlToScene(xmlInput: string): Scene {
   // (function parseLight(cameraNode: Element) {
     // console.log(cameraNode);
   const requiredAttributes = ['pos', 'lookAt'];
-  if (requiredAttributes.every(a => cameraNode.hasAttribute(a))) {
+  if (requiredAttributes.every(a => !!cameraNode.getAttribute(a))) {
     const posAtt = <string>cameraNode.getAttribute('pos');
     const lookAtAtt = <string>cameraNode.getAttribute('lookAt');
 

@@ -30,6 +30,7 @@ cd ..
 cd back/
 npm install --dev
 npm run build
+npm prune --production
 cd ..
 
 cp -r -v front/dist/* back/public/
