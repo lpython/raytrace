@@ -7,8 +7,8 @@
   "license": "ISC",
   "scripts": {
     "build": "npm run build-cjs && npm run build-es6",
-    "build-cjs": "npx tsc",
-    "build-es6": "npx tsc -p tsconfig.es6.json"
+    "build-cjs": "tsc",
+    "build-es6": "tsc -p tsconfig.es6.json"
   },
  
   "main": "lib/index.js",

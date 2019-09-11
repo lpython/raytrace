@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "@python36/raytrace": "^1.2.0",
-    "@python36/scene-xml": "^1.1.0"
+    "@python36/scene-xml": "^1.1.1"
   }
 }
