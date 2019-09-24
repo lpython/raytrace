@@ -38,7 +38,7 @@ app.get('/gen.bmp', (req, res) => {
   const rayTracer = new RayTracer();
   rayTracer.renderToImage(defaultScene(), img);
   
-  ABGRtoRGBA(img.data);
+  RGBAtoABGR(img.data);
 
   res.contentType('image/bmp');
   res.send(bmp.encode(img).data);
@@ -59,7 +59,7 @@ app.post('/gen_xml', (req, res) => {
   const scene = xmlToScene(req.body.scene);
   rayTracer.renderToImage(scene, img);
   
-  ABGRtoRGBA(img.data);
+  RGBAtoABGR(img.data);
 
   res.contentType('image/bmp');
   res.send(bmp.encode(img).data);
@@ -68,7 +68,7 @@ app.post('/gen_xml', (req, res) => {
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
-function ABGRtoRGBA(imageData: Uint8ClampedArray) {
+function RGBAtoABGR(imageData: Uint8ClampedArray) {
   for (let i = 0; i < imageData.length; i += 4) {
     let r = imageData[i]; let g = imageData[i + 1]; let b = imageData[i + 2]; let a = imageData[i + 3];
     imageData[i] = a; imageData[i + 1] = b; imageData[i + 2] = g; imageData[i + 3] = r;

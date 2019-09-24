@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
 import { samples } from '@python36/scene-xml';
 
 import { sceneProcessors } from './processors';
@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const renderingEl = useRef(null);
 
   const setScene = (e: any) => setXmlInput(samples[e.target.value]);
-  const setHeight = ():void  => {
+  const setHeight = useCallback(():void  => {
     console.log('setHeight():', {renderingEl})
     if (renderingEl && renderingEl.current) {
       const elm = renderingEl.current as any;
@@ -22,7 +22,7 @@ const App: React.FC = () => {
         setTextareaHeight(elm.clientHeight);
       }
     }
-  };
+  }, [renderingEl, textareaHeight]);
 
   const render = () => {
     const selectedProcessor = sceneProcessors[processor];
@@ -45,15 +45,16 @@ const App: React.FC = () => {
     return () => window.removeEventListener('resize', setHeight);
   }, [setHeight]);
 
-  useEffect(() => void setTimeout(setHeight, 1000));
-
+  useLayoutEffect(() => void setTimeout(() => 
+    window.dispatchEvent(new Event('resize')), 1)
+  , [imageURL]);
+  
   return (
     <div className="container">
       <hr />
 
       <div className="row">
         <div className="col-md-6">
-          {/* {imageURL && (<img src={imageURL} ref={renderingEl} className="rendering" />)} */}
           <img src={imageURL} ref={renderingEl} className="rendering" />
         </div>
         <div className="col-md-6 visible-md-inline visible-lg-inline">

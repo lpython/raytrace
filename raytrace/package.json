@@ -1,5 +1,5 @@
 {
-  "name": "@python36/raytrace", 
+  "name": "@python36/raytrace",
   "version": "1.3.1",
   "description": "Raytracer from typescript samples, broken up into modules",
   "keywords": [],
@@ -10,7 +10,6 @@
     "build-cjs": "tsc",
     "build-es6": "tsc -p tsconfig.es6.json"
   },
- 
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "module": "lib/esm/index.js",

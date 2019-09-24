@@ -49,13 +49,13 @@ export const sceneProcessors: SceneProcessors = {
     const imageData = new ImageData(size, size);
 
     raytracer.renderToImage(scene, imageData);
+    RGBAtoABGR(imageData.data);
     const { data: buffer } = bmp.encode(imageData);
     let newBlob = new Blob([buffer], {type: 'image/bmp'});
-    console.log({newBlob})
     let url = URL.createObjectURL(newBlob);
     return Promise.resolve(url);
-
   },
+  
   // 'golang-back': (xml, size) => {
   //   fetch("http://localhost:5600/gen_xml.png?" + "xml-scene=" + encodeURI(xml), {
   //     "headers": {
@@ -88,3 +88,10 @@ export const sceneProcessors: SceneProcessors = {
   //     });
   // }
 };
+
+function RGBAtoABGR(imageData: Uint8ClampedArray) {
+  for (let i = 0; i < imageData.length; i += 4) {
+    let r = imageData[i]; let g = imageData[i + 1]; let b = imageData[i + 2]; let a = imageData[i + 3];
+    imageData[i] = a; imageData[i + 1] = b; imageData[i + 2] = g; imageData[i + 3] = r;
+  }
+}

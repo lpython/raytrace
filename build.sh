@@ -42,6 +42,6 @@ cd ..
 
 # copy frontend bundles to public folder
 cp -r -v front/build/* back/public/
-cp -r -v react-client/build/* back/public/
+cp -r -v react-client/build/* back/public/react-client
 
 echo 'Finished build'
