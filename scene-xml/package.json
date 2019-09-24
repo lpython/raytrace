@@ -19,7 +19,6 @@
     "watch-es6": "tsc -w -p tsconfig.es6.json",
     "watch": "concurrently \"npm:watch-*\" "
   },
-
   "dependencies": {
     "@python36/raytrace": "^1.2.2",
     "dom-parser": "^0.1.6"

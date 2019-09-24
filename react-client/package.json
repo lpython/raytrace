@@ -9,6 +9,7 @@
     "@types/node": "12.7.4",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "bmp-js": "^0.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
@@ -35,5 +36,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:1234"
+  "proxy": "http://localhost:1234",
+  "homepage": "https://python-raytrace.herokuapp.com/react-client"
 }

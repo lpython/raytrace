@@ -26,6 +26,13 @@ npm run build
 rm -r node_modules/
 cd ..
 
+# front (react)
+cd react-client/
+npm install --dev
+npm run build
+rm -r node_modules/
+cd ..
+
 # back 
 cd back/
 npm install --dev
@@ -33,6 +40,8 @@ npm run build
 npm prune --production
 cd ..
 
-cp -r -v front/dist/* back/public/
+# copy frontend bundles to public folder
+cp -r -v front/build/* back/public/
+cp -r -v react-client/build/* back/public/
 
 echo 'Finished build'

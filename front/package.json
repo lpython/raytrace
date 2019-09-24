@@ -10,7 +10,6 @@
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server"
   },
-
   "devDependencies": {
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.0.4",

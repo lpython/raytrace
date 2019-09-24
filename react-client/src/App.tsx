@@ -1,15 +1,28 @@
-import React, { useState, useEffect, SyntheticEvent } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { samples } from '@python36/scene-xml';
 
 import { sceneProcessors } from './processors';
 
 const App: React.FC = () => {
-  const [ imageURL, setImageURL ] = useState<string | null>(null);
+  const [ imageURL, setImageURL ] = useState<string | undefined>(undefined);
   const [ xmlInput, setXmlInput ] = useState(samples['Default Scene']);
   const [ size, setSize ] = useState(128);
   const [ processor, setProcessor ] = useState('typescript-front');
+  const [ textareaHeight, setTextareaHeight ] = useState(256);
+
+  const renderingEl = useRef(null);
 
   const setScene = (e: any) => setXmlInput(samples[e.target.value]);
+  const setHeight = ():void  => {
+    console.log('setHeight():', {renderingEl})
+    if (renderingEl && renderingEl.current) {
+      const elm = renderingEl.current as any;
+      if (elm.clientHeight !== textareaHeight && elm.clientHeight > 256) {
+        console.log('setTextareaHeight():',{clientHeight: elm.clientHeight, textareaHeight})
+        setTextareaHeight(elm.clientHeight);
+      }
+    }
+  };
 
   const render = () => {
     const selectedProcessor = sceneProcessors[processor];
@@ -18,12 +31,21 @@ const App: React.FC = () => {
       .catch(err => console.log({ err }));
   }
 
+  // Initial backend rendering
   useEffect(() => {
     const tsBack = sceneProcessors['typescript-back'];
     tsBack(samples['Default Scene'], 512)
       .then(url => setImageURL(url))
       .catch(err => console.log({ err }));
-  }, [])
+  }, []);
+
+  // Keep textarea sized with image
+  useEffect(() => {
+    window.addEventListener('resize', setHeight); 
+    return () => window.removeEventListener('resize', setHeight);
+  }, [setHeight]);
+
+  useEffect(() => void setTimeout(setHeight, 1000));
 
   return (
     <div className="container">
@@ -31,12 +53,14 @@ const App: React.FC = () => {
 
       <div className="row">
         <div className="col-md-6">
-          {imageURL && (<img src={imageURL} className="rendering" />)}
+          {/* {imageURL && (<img src={imageURL} ref={renderingEl} className="rendering" />)} */}
+          <img src={imageURL} ref={renderingEl} className="rendering" />
         </div>
         <div className="col-md-6 visible-md-inline visible-lg-inline">
           <textarea 
             id="ray-input" 
             className="form-control" 
+            style={{height: textareaHeight.toString() + 'px'}}
             rows={10} 
             spellCheck={false} 
             wrap="off" 

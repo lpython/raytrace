@@ -6,10 +6,11 @@
   "author": "Alex M (lpython)",
   "license": "ISC",
   "scripts": {
-    "start": "node lib/server.js",
+    "start": "node build/server.js",
     "build": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly src/server.ts",
-    "watch-front": "cpx \"../front/dist/*\" \"./public/\" -w"
+    "watch-front": "cpx  -w -v \"../front/build/*\" \"./public/\" ",
+    "watch-react": "cpx  -w -v \"../react-client/build/**\" \"./public/react-client\" "
   },
 
   "dependencies": {

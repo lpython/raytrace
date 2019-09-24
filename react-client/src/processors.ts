@@ -1,18 +1,22 @@
 
+import Raytrace, { Scene } from '@python36/raytrace'
+import { xmlToScene } from '@python36/scene-xml';
+import * as bmp from 'bmp-js';
+
+
 export interface SceneProcessors {
   [index: string] : (xml: string, size: number) => Promise<string>
 }
 
 export const sceneProcessors: SceneProcessors = {
   'typescript-back': (xml, size): Promise<string> => {
-
     let json = JSON.stringify({
       scene: xml, 
       width: size,
       height: size
     });
 
-    return fetch("gen_xml", {
+    return fetch("/gen_xml", {
       "headers": {
         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
         "accept-language": "en-US,en;q=0.9",
@@ -25,36 +29,33 @@ export const sceneProcessors: SceneProcessors = {
     })
       .then(res => res.blob())
       .then(blob => URL.createObjectURL(blob))
-
   }, 
-  // 'typescript-front': (xml, size) => {
-  //   console.log('typescript-front');
 
-  //   let result: Scene | undefined;
+  'typescript-front': (xml, size): Promise<string> => {
+
+    console.log('typescript-front')
+
+    let scene: Scene | undefined;
     
-  //   try {
-  //     result = xmlToScene(sceneInput.value);
-  //   }
-  //   catch (error) {
-  //     console.error('Error during XML parsing:', error);
-  //   }
+    try {
+      scene = xmlToScene(xml);
+    }
+    catch (error) {
+      console.error('Error during XML parsing:', error);
+      return Promise.reject(error);
+    }
 
-  //   if (result) {
-  //     timedRaytrace(result);
-  //   } else {
-  //     // let scene = xmlToScene(samples['empty'])
+    const raytracer = new Raytrace();
+    const imageData = new ImageData(size, size);
 
-  //     // scene = emptyScene();
-  //     timedRaytrace(emptyScene());
+    raytracer.renderToImage(scene, imageData);
+    const { data: buffer } = bmp.encode(imageData);
+    let newBlob = new Blob([buffer], {type: 'image/bmp'});
+    console.log({newBlob})
+    let url = URL.createObjectURL(newBlob);
+    return Promise.resolve(url);
 
-  //     ['btn-primary', 'btn-success', 'btn-warning', 'btn-danger']
-  //       .forEach(className => { elapsedButton.classList.remove(className); });
-
-  //     elapsedButton.classList.add('btn-danger');
-  //     elapsedButton.textContent = 'Invalid XML';
-  //   }
-  //   outputRenderImage();
-  // },
+  },
   // 'golang-back': (xml, size) => {
   //   fetch("http://localhost:5600/gen_xml.png?" + "xml-scene=" + encodeURI(xml), {
   //     "headers": {

@@ -11,14 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* 
-canvas {
+
+.rendering {
   width: 100%;
-  max-width: 80vh;
-  padding: 0;
-  margin: auto;
-  display: block;
-} */
+}
 
 textarea {
   font-family: monospace;
